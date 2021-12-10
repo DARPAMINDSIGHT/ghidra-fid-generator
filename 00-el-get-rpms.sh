@@ -6,7 +6,7 @@ fi
 
 mkdir -p rpms
 cd rpms
-cat ../filelist | grep "\-static\-.*\.rpm$\|/gcc" | while read rpm; do
+cat ../filelist | grep openssl -i | grep "\-static\-.*\.rpm$\|/gcc" | while read rpm; do
 	wget -c "http://mirror.centos.org/centos/${rpm}"
 done
 
